@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CCNU课程推荐系统</title>
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+   		<meta http-equiv="description" content="this is my page">
+   		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+   		<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    
+
+		<link rel="stylesheet" type="text/css" href="../static/Css/quickQuery.css">
+		<link rel="stylesheet" type="text/css" href="../static/Css/identify.css" />
+		<link rel="stylesheet" type="text/css" href="../static/Css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../static/Css/account.css" />
+		<link rel="stylesheet" type="text/css" href="../static/Css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../static/Css/control_index.css" />
+		<script type="text/javascript" src="../static/Js/quickQuery-packer.js"></script>
+		<script type="text/javascript" src="../static/Js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../static/Js/layer/layer.js"></script>
+		<script type="text/javascript" src="../static/Js/haidao.offcial.general.js"></script>
+		<script type="text/javascript" src="../static/Js/select.js"></script>
+		<script type="text/javascript" src="../static/Js/haidao.validate.js"></script>
+		
+		<script type="text/javascript">
+
+		var arriveCityArray = new Array("","","");
+			arriveCityArray[0] = new Array("0", "学生学号");
+			arriveCityArray[1] = new Array("1", "学生姓名");
+			arriveCityArray[2] = new Array("2", "课程代码");
+			arriveCityArray[3] = new Array("3", "课程名称");
+			arriveCityArray[4] = new Array("4", "开课学年");
+			arriveCityArray[5] = new Array("5", "开课学期");
+			arriveCityArray[6] = new Array("6", "开课部门名称");
+			arriveCityArray[7] = new Array("7", "开课部门编号");
+			arriveCityArray[8] = new Array("8", "教学班名称");
+	
+
+		
+		window.onload = function(){
+			$quickQuery(arriveCityArray);
+		}
+	</script>
+	</head>
+
+	<body>
+		<div class="view-topbar">
+			<div class="topbar-console">
+				<div class="tobar-head fl">
+					<a href="#" class="topbar-logo fl">
+					<span><img src="../static/Images/logo2.png" width="20" height="20"/></span>
+					</a>
+					<a href="index.html" class="topbar-home-link topbar-btn text-center fl"><span>华中师范大学-课程推荐系统</span></a>
+				</div>
+			</div>
+			<div class="topbar-info">
+				<ul class="fr">
+					<li class="fl dropdown topbar-notice topbar-btn">
+					<a href="#" class="dropdown-toggle">
+					<span class="icon-notice"></span>
+					<span class="topbar-num have">0</span>
+					<!--have表示有消息，没有消息去掉have-->
+					</a>
+					</li>
+					<li class="fl topbar-info-item">
+					</li>
+					<li class="fl topbar-info-item">
+					<div class="dropdown">
+						<a href="#" class="topbar-btn">
+						<span class="fl text-normal">admin</span>
+						<span class="icon-arrow-down"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="login.html">退出</a></li>
+						</ul>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="view-body">
+			<div class="view-sidebar">
+				<div class="sidebar-content">
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="#">
+								<span class="icon"><b class="fl icon-arrow-down"></b></span>
+								<span class="text-normal">课程信息查询</span>
+							</a>
+						</div>
+						<ul class="sidebar-trans">
+							<li>
+								<a href="webSet">
+									<b class="sidebar-icon"><img src="../static/Images/icon_author.png" width="16" height="16" /></b>
+									<span class="text-normal">全部课程</span>
+								</a>
+							</li>
+							<li>
+								<a href="findInfo">
+									<b class="sidebar-icon"><img src="../static/Images/icon_message.png" width="16" height="16" /></b>
+									<span class="text-normal">课程查询</span>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="#">
+								<span class="icon"><b class="fl icon-arrow-down"></b></span>
+								<span class="text-normal">推荐课程</span>
+							</a>
+						</div>
+						<ul class="sidebar-trans">
+							<li>
+								<a href="recommend">
+									<b class="sidebar-icon"><img src="../static/Images/icon_cost.png" width="16" height="16" /></b>
+									<span class="text-normal">推荐选课</span>
+								</a>
+							</li>
+							<li>
+								<a href="identify.html">
+									<b class="sidebar-icon"><img src="../static/Images/icon_authentication.png" width="16" height="16" /></b>
+									<span class="text-normal">选课测试</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="view-product">
+				<div class="authority">
+					<div class="authority-head">
+						<div class="manage-head">
+							<h6 class="layout padding-left manage-head-con">课程信息查询
+							<span class="fr text-small text-normal padding-top">发布时间：2018-12-05</span>
+							<span class="fr margin-large-right padding-top text-small text-normal">最新版本：<em class="text-main">0.0.0.1</em></span>
+							</h6>
+							<br /><br />
+							<h3>搜索课程信息：</h3>
+							<input type="submit" value="搜索课程信息：">
+
+							<input class="quickQuery$focus" id="q1" style="border: 3px solid #ccc;" />
+
+						    <input class="" style="border: 3px solid #ccc;"/>
+						    
+						    <input type="submit" class="quickQuery$focus" value="立即搜索">
+						    <div class="quickQuery$focus"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		
+		<script>
+			$(".sidebar-title").live('click', function() {
+				if ($(this).parent(".sidebar-nav").hasClass("sidebar-nav-fold")) {
+					$(this).next().slideDown(200);
+					$(this).parent(".sidebar-nav").removeClass("sidebar-nav-fold");
+				} else {
+					$(this).next().slideUp(200);
+					$(this).parent(".sidebar-nav").addClass("sidebar-nav-fold");
+				}
+			});
+		</script>
+	</body>
+
+</html>

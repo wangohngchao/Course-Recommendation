@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CCNU课程推荐系统</title>
+		<link rel="stylesheet" type="text/css" href="../static/Css/identify.css" />
+		<link rel="stylesheet" type="text/css" href="../static/Css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../static/Css/account.css" />
+		<link rel="stylesheet" type="text/css" href="../static/Css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../static/Css/control_index.css" />
+		<script type="text/javascript" src="../static/Js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../static/Js/layer/layer.js"></script>
+		<script type="text/javascript" src="../static/Js/haidao.offcial.general.js"></script>
+		<script type="text/javascript" src="../static/Js/select.js"></script>
+		<script type="text/javascript" src="../static/Js/haidao.validate.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- jqGrid组件基础样式包-必要 -->
+		<link rel="stylesheet" href="../static/jqgrid/css/ui.jqgrid.css" />
+		
+		<!-- jqGrid主题包-非必要 --> 
+		<!-- 在jqgrid/css/css这个目录下还有其他的主题包，可以尝试更换看效果 -->
+		<link rel="stylesheet" href="../static/jqgrid/css/css/cupertino/jquery-ui-1.8.16.custom.css" />
+
+		<!-- jquery插件包-必要 -->
+		<!-- 这个是所有jquery插件的基础，首先第一个引入 -->
+		<script type="text/javascript" src="../static/js/jquery-1.7.1.js"></script>
+		
+		<!-- jqGrid插件包-必要 -->
+		<script type="text/javascript" src="../static/jqgrid/js/jquery.jqGrid.src.js"></script>
+		
+		<!-- jqGrid插件的多语言包-非必要 -->
+		<!-- 在jqgrid/js/i18n下还有其他的多语言包，可以尝试更换看效果 -->
+		<script type="text/javascript" src="../static/jqgrid/js/i18n/grid.locale-cn.js"></script>
+
+		<!-- 本页面初始化用到的js包，创建jqGrid的代码就在里面 -->
+		<script type="text/javascript" src="../static/js/search.js"></script>
+	</head>
+
+	<body>
+		<div class="view-topbar">
+			<div class="topbar-console">
+				<div class="tobar-head fl">
+					<a href="#" class="topbar-logo fl">
+					<span><img src="../static/Images/logo2.png" width="20" height="20"/></span>
+					</a>
+					<a href="index.html" class="topbar-home-link topbar-btn text-center fl"><span>华中师范大学-课程推荐系统</span></a>
+				</div>
+			</div>
+			<div class="topbar-info">
+				<ul class="fr">
+					<li class="fl dropdown topbar-notice topbar-btn">
+					<a href="#" class="dropdown-toggle">
+					<span class="icon-notice"></span>
+					<span class="topbar-num have">0</span>
+					<!--have表示有消息，没有消息去掉have-->
+					</a>
+					</li>
+					<!-- 					<li class="fl topbar-info-item strong">
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle topbar-btn">
+						<span class="fl">工单服务</span>
+						<span class="icon-arrow-down"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">我的工单</a></li>
+							<li><a href="#">提交工单</a></li>
+						</ul>
+					</div>
+					</li>
+					 -->
+					<li class="fl topbar-info-item">
+					</li>
+					<li class="fl topbar-info-item">
+					<div class="dropdown">
+						<a href="#" class="topbar-btn">
+						<span class="fl text-normal">admin</span>
+						<span class="icon-arrow-down"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="login.html">退出</a></li>
+						</ul>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="view-body">
+			<div class="view-sidebar">
+				<div class="sidebar-content">
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="#">
+								<span class="icon"><b class="fl icon-arrow-down"></b></span>
+								<span class="text-normal">课程信息</span>
+							</a>
+						</div>
+						<ul class="sidebar-trans">
+							<li>
+								<a href="webSet">
+									<b class="sidebar-icon"><img src="../static/Images/icon_author.png" width="16" height="16" /></b>
+									<span class="text-normal">全部课程</span>
+								</a>
+							</li>
+							<li>
+								<a href="findInfo">
+									<b class="sidebar-icon"><img src="../static/Images/icon_message.png" width="16" height="16" /></b>
+									<span class="text-normal">课程查询</span>
+								</a>
+							</li>
+							<!-- <li>
+								<a href="#">
+									<b class="sidebar-icon"><img src="Images/icon_market.png" width="16" height="16" /></b>
+									<span class="text-normal">云市场</span>
+								</a>
+							</li> -->
+						</ul>
+					</div>
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="#">
+								<span class="icon"><b class="fl icon-arrow-down"></b></span>
+								<span class="text-normal">推荐课程</span>
+							</a>
+						</div>
+						<ul class="sidebar-trans">
+							<li>
+								<a href="recommend">
+									<b class="sidebar-icon"><img src="../static/Images/icon_cost.png" width="16" height="16" /></b>
+									<span class="text-normal">推荐选课</span>
+								</a>
+							</li>
+							<li>
+								<a href="identify.html">
+									<b class="sidebar-icon"><img src="../static/Images/icon_authentication.png" width="16" height="16" /></b>
+									<span class="text-normal">选课测试</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="view-product">
+				<div class="authority">
+					<div class="authority-head">
+						<div class="manage-head">
+							<h6 class="layout padding-left manage-head-con">课程信息
+							<span class="fr text-small text-normal padding-top">发布时间：2018-12-05</span>
+							<span class="fr margin-large-right padding-top text-small text-normal">最新版本：<em class="text-main">0.0.0.1</em></span>
+							</h6>
+							<br /><br />
+							<table id="list2"></table> 
+							<div id="pager2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(".sidebar-title").live('click', function() {
+				if ($(this).parent(".sidebar-nav").hasClass("sidebar-nav-fold")) {
+					$(this).next().slideDown(200);
+					$(this).parent(".sidebar-nav").removeClass("sidebar-nav-fold");
+				} else {
+					$(this).next().slideUp(200);
+					$(this).parent(".sidebar-nav").addClass("sidebar-nav-fold");
+				}
+			});
+		</script>
+	</body>
+
+</html>
